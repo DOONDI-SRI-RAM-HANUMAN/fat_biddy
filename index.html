@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Fat Biddy Cafe
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#faf7f2;
+color:#2f2f2f;
+overflow-x:hidden;
+
+}
+
+.page{
+display:none;
+}
+
+.page.active{
+display:block;
+}
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+padding:22px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:
+rgba(255,255,255,.75);
+
+backdrop-filter:
+blur(20px);
+
+z-index:1000;
+
+border-bottom:
+1px solid rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+font-size:34px;
+font-weight:900;
+
+color:#7b5e57;
+
+letter-spacing:1px;
+
+}
+
+.nav-links{
+
+display:flex;
+gap:35px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:#333;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#d4a373;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+url('fat1.jpg');
+
+background-size:cover;
+background-position:center;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+color:white;
+
+}
+
+.hero-tag{
+
+font-size:18px;
+
+letter-spacing:8px;
+
+color:#f7d9a0;
+
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-size:110px;
+
+font-weight:900;
+
+line-height:1;
+
+margin-bottom:10px;
+
+}
+
+.hero-sub{
+
+font-size:28px;
+
+letter-spacing:12px;
+
+color:#f7d9a0;
+
+margin-bottom:30px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:40px;
+
+margin-bottom:30px;
+
+}
+
+.premium-rating{
+
+display:inline-block;
+
+padding:14px 30px;
+
+background:
+rgba(255,255,255,.15);
+
+backdrop-filter:
+blur(15px);
+
+border-radius:50px;
+
+margin-bottom:25px;
+
+}
+
+.btn{
+
+padding:16px 35px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:600;
+
+margin:10px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.btn-primary{
+
+background:#d4a373;
+
+color:white;
+
+}
+
+.btn-secondary{
+
+background:white;
+
+color:#7b5e57;
+
+}
+
+.section{
+
+padding:110px 8%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+font-size:55px;
+
+color:#7b5e57;
+
+margin-bottom:10px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:400px;
+
+object-fit:cover;
+
+border-radius:30px;
+
+transition:.4s;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.1);
+
+}
+
+.gallery-grid img:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+}
+
+</style>
+
+</head>
+
+<body>
+  <!-- ===================== -->
+<!-- NAVIGATION -->
+<!-- ===================== -->
+
+<nav>
+
+<div class="logo">
+
+Fat Biddy Cafe
+
+</div>
+
+<div class="nav-links">
+
+<a onclick="showPage('home')">Home</a>
+
+<a onclick="showPage('about')">About</a>
+
+<a onclick="showPage('menu')">Menu</a>
+
+<a onclick="showPage('gallery')">Gallery</a>
+
+<a onclick="showPage('reviews')">Reviews</a>
+
+<a onclick="showPage('contact')">Contact</a>
+
+</div>
+
+</nav>
+
+<!-- ===================== -->
+<!-- HOME PAGE -->
+<!-- ===================== -->
+
+<div class="page active" id="page-home">
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+
+SIP • RELAX • REPEAT
+
+</div>
+
+<h1>
+
+FAT BIDDY
+
+</h1>
+
+<div class="hero-sub">
+
+CAFE
+
+</div>
+
+<div class="premium-rating">
+
+⭐ 4.8 Rating • 41 Reviews • Vijayawada
+
+</div>
+
+<p>
+
+Where Great Food Meets Great Vibes
+
+<br><br>
+
+A premium cafe experience designed for coffee lovers,
+food enthusiasts and unforgettable memories.
+
+</p>
+
+<a href="https://wa.me/919676848887"
+target="_blank">
+
+<button class="btn btn-primary">
+
+WhatsApp Us
+
+</button>
+
+</a>
+
+<button
+onclick="showPage('menu')"
+class="btn btn-secondary">
+
+Explore Menu
+
+</button>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Why Customers Love Us
+
+</h2>
+
+<p>
+
+A modern cafe experience in the heart of Kanuru
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+☕ Premium Coffee
+
+</h3>
+
+<p>
+
+Freshly brewed coffee made with passion and quality ingredients.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🍔 Delicious Food
+
+</h3>
+
+<p>
+
+Tasty snacks, burgers and meals prepared fresh every day.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🌿 Beautiful Ambience
+
+</h3>
+
+<p>
+
+Warm interiors and cozy seating for every occasion.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+📸 Instagram Worthy
+
+</h3>
+
+<p>
+
+Aesthetic interiors perfect for photos and memorable moments.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+<!-- ===================== -->
+<!-- ABOUT PAGE -->
+<!-- ===================== -->
+
+<div class="page" id="page-about">
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Our Story
+
+</h2>
+
+<p>
+
+More Than A Cafe, A Place To Create Memories
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+☕ Premium Coffee Culture
+
+</h3>
+
+<p>
+
+Fat Biddy Cafe was created for people who appreciate great coffee, delicious food and meaningful conversations in a beautiful atmosphere.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🌿 Cozy Environment
+
+</h3>
+
+<p>
+
+Designed with comfort, aesthetics and positive vibes to make every visit memorable and relaxing.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🍽️ Quality First
+
+</h3>
+
+<p>
+
+We focus on fresh ingredients, excellent service and premium experiences for every guest.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FULL WIDTH IMAGE -->
+
+<section>
+
+<img
+src="fat2.jpg"
+
+style="
+width:100%;
+height:85vh;
+object-fit:cover;
+display:block;
+">
+
+</section>
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Why Choose Fat Biddy Cafe
+
+</h2>
+
+<p>
+
+The Perfect Blend Of Taste, Comfort And Atmosphere
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+⭐ Highly Rated
+
+</h3>
+
+<p>
+
+4.8 star customer rating and growing community of happy visitors.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+📸 Instagram Friendly
+
+</h3>
+
+<p>
+
+Beautiful interiors and aesthetic corners perfect for photos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+💚 Friendly Service
+
+</h3>
+
+<p>
+
+Warm hospitality and a welcoming environment for everyone.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+<!-- ===================== -->
+<!-- MENU PAGE -->
+<!-- ===================== -->
+
+<div class="page" id="page-menu">
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Signature Menu
+
+</h2>
+
+<p>
+
+Crafted With Passion • Served With Love
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+☕ Cappuccino
+
+</h3>
+
+<p>
+
+Rich espresso blended with silky milk foam.
+
+</p>
+
+<br>
+
+<h4>
+
+₹149
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🥤 Cold Coffee
+
+</h3>
+
+<p>
+
+Refreshing chilled coffee topped with creamy goodness.
+
+</p>
+
+<br>
+
+<h4>
+
+₹179
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🍫 Chocolate Shake
+
+</h3>
+
+<p>
+
+Creamy chocolate delight loved by everyone.
+
+</p>
+
+<br>
+
+<h4>
+
+₹199
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🍔 Fat Biddy Burger
+
+</h3>
+
+<p>
+
+Juicy burger loaded with flavor and freshness.
+
+</p>
+
+<br>
+
+<h4>
+
+₹249
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🥪 Grilled Sandwich
+
+</h3>
+
+<p>
+
+Perfectly grilled and packed with taste.
+
+</p>
+
+<br>
+
+<h4>
+
+₹169
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🍟 French Fries
+
+</h3>
+
+<p>
+
+Golden crispy fries served fresh and hot.
+
+</p>
+
+<br>
+
+<h4>
+
+₹129
+
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHEF SPECIALS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Chef's Specials
+
+</h2>
+
+<p>
+
+Most Loved By Our Customers
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+🔥 Fat Biddy Combo
+
+</h3>
+
+<p>
+
+Burger + Fries + Cold Coffee
+
+</p>
+
+<br>
+
+<h4>
+
+₹399
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⭐ Customer Favourite
+
+</h3>
+
+<p>
+
+Chocolate Shake + Cheesecake
+
+</p>
+
+<br>
+
+<h4>
+
+₹349
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+☕ Premium Experience
+
+</h3>
+
+<p>
+
+Coffee, food and ambience in one place.
+
+</p>
+
+<br>
+
+<h4>
+
+Must Try
+
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PREMIUM IMAGE -->
+
+<section>
+
+<img
+src="fat3.jpg"
+
+style="
+width:100%;
+height:85vh;
+object-fit:cover;
+display:block;
+">
+
+</section>
+
+</div>
+<!-- ===================== -->
+<!-- GALLERY PAGE -->
+<!-- ===================== -->
+
+<div class="page" id="page-gallery">
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Cafe Gallery
+
+</h2>
+
+<p>
+
+Every Corner Designed For Comfort & Memories
+
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="fat1.jpg">
+
+<img src="fat2.jpg">
+
+<img src="fat3.jpg">
+
+<img src="fat2.jpg">
+
+<img src="fat3.jpg">
+
+<img src="fat1.jpg">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+The Fat Biddy Experience
+
+</h2>
+
+<p>
+
+Relax • Connect • Enjoy
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+🌿 Beautiful Interiors
+
+</h3>
+
+<p>
+
+A warm atmosphere with elegant design and comfortable seating.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+📸 Instagram Worthy
+
+</h3>
+
+<p>
+
+Every corner is crafted to create beautiful memories and photos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+☕ Perfect Coffee Moments
+
+</h3>
+
+<p>
+
+Enjoy premium beverages in a cozy environment.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+💚 Friendly Environment
+
+</h3>
+
+<p>
+
+Ideal for friends, families, dates and casual meetings.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<img
+src="fat1.jpg"
+
+style="
+width:100%;
+height:90vh;
+object-fit:cover;
+display:block;
+">
+
+</section>
+
+</div>
+<!-- ===================== -->
+<!-- REVIEWS PAGE -->
+<!-- ===================== -->
+
+<div class="page" id="page-reviews">
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Loved By Customers
+
+</h2>
+
+<p>
+
+Rated 4.8 ★ By Happy Visitors
+
+</p>
+
+</div>
+
+<center>
+
+<div class="premium-rating">
+
+⭐ 4.8 / 5 Rating
+
+&nbsp;&nbsp;•&nbsp;&nbsp;
+
+41 Reviews
+
+&nbsp;&nbsp;•&nbsp;&nbsp;
+
+Google Reviews
+
+</div>
+
+</center>
+
+<br><br><br>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<br>
+
+<p>
+
+"Good service Food quality super 😋"
+
+</p>
+
+<br>
+
+<h4>
+
+Customer Review
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<br>
+
+<p>
+
+"Damn good fresh food and tasty yummy"
+
+</p>
+
+<br>
+
+<h4>
+
+Customer Review
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<br>
+
+<p>
+
+"Nice place with affordable offerings"
+
+</p>
+
+<br>
+
+<h4>
+
+Customer Review
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<br>
+
+<p>
+
+"Taste is good"
+
+</p>
+
+<br>
+
+<h4>
+
+Ravindra Chinta
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<br>
+
+<p>
+
+"Reasonable prices. Worth it. Tasty 😋"
+
+</p>
+
+<br>
+
+<h4>
+
+Dakarla Sowndarya
+
+</h4>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+⭐⭐⭐⭐⭐
+
+</h3>
+
+<br>
+
+<p>
+
+"Super experience"
+
+</p>
+
+<br>
+
+<h4>
+
+Akshay Daliparthi
+
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TRUST SECTION -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Why People Keep Returning
+
+</h2>
+
+<p>
+
+More Than Food. More Than Coffee.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+🍽️ Quality Food
+
+</h3>
+
+<p>
+
+Prepared using fresh ingredients and served with care.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+☕ Great Coffee
+
+</h3>
+
+<p>
+
+Perfectly brewed beverages loved by customers.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+💚 Friendly Service
+
+</h3>
+
+<p>
+
+A welcoming experience every single visit.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🌿 Beautiful Atmosphere
+
+</h3>
+
+<p>
+
+Comfortable spaces designed for relaxation and enjoyment.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<img
+src="fat2.jpg"
+
+style="
+width:100%;
+height:90vh;
+object-fit:cover;
+display:block;
+">
+
+</section>
+
+</div><!-- ===================== -->
+<!-- CONTACT PAGE -->
+<!-- ===================== -->
+
+<div class="page" id="page-contact">
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Visit Fat Biddy Cafe
+
+</h2>
+
+<p>
+
+Where Great Food Meets Great Vibes
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+📍 Address
+
+</h3>
+
+<br>
+
+<p>
+
+Police Station Road<br>
+Padmaja Nagar<br>
+Kanuru<br>
+Vijayawada<br>
+Andhra Pradesh 520007
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+📞 Contact Us
+
+</h3>
+
+<br>
+
+<p>
+
++91 96768 48887
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🕒 Opening Hours
+
+</h3>
+
+<br>
+
+<p>
+
+Open Daily<br>
+Till 11:00 PM
+
+</p>
+
+</div>
+
+</div>
+
+<br><br><br>
+
+<center>
+
+<a href="tel:+919676848887">
+
+<button class="btn btn-primary">
+
+Call Now
+
+</button>
+
+</a>
+
+<a href="https://wa.me/919676848887"
+target="_blank">
+
+<button class="btn btn-secondary">
+
+WhatsApp
+
+</button>
+
+</a>
+
+<a href="https://maps.google.com/?q=Fat+Biddy+Cafe+Kanuru+Vijayawada"
+target="_blank">
+
+<button class="btn btn-primary">
+
+Get Directions
+
+</button>
+
+</a>
+
+</center>
+
+</section>
+
+</div>
+
+<!-- ===================== -->
+<!-- FLOATING WHATSAPP -->
+<!-- ===================== -->
+
+<a
+href="https://wa.me/919676848887"
+class="whatsapp-float"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<footer>
+
+Fat Biddy Cafe © 2026
+
+<br><br>
+
+Premium Cafe Experience • Kanuru • Vijayawada
+
+</footer>
+
+<style>
+
+.whatsapp-float{
+
+position:fixed;
+
+bottom:25px;
+right:25px;
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#25D366;
+
+color:white;
+
+font-size:35px;
+
+text-decoration:none;
+
+z-index:9999;
+
+box-shadow:
+0 15px 30px rgba(37,211,102,.4);
+
+animation:whatsappPulse 2s infinite;
+
+}
+
+@keyframes whatsappPulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+</style>
+
+<script>
+
+function showPage(page){
+
+document
+.querySelectorAll('.page')
+.forEach(item=>{
+
+item.classList.remove('active');
+
+});
+
+document
+.getElementById('page-'+page)
+.classList.add('active');
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+}
+
+</script>
+
+</body>
+</html>
