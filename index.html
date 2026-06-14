@@ -7,39 +7,9 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Fat Biddy Cafe | Best Cafe in Kanuru Vijayawada</title>
-
-<meta name="description" content="Fat Biddy Cafe in Kanuru, Vijayawada. Enjoy premium coffee, burgers, sandwiches, shakes and a cozy atmosphere. Call +91 9676848887.">
-
-<meta name="keywords" content="Fat Biddy Cafe, Cafe in Vijayawada, Best Cafe in Kanuru, Coffee Shop Vijayawada, Burgers, Shakes, Restaurant Vijayawada">
-
-<meta name="author" content="RAM AI Web Solutions">
-
-<meta property="og:title" content="Fat Biddy Cafe">
-<meta property="og:description" content="Best Cafe in Kanuru, Vijayawada">
-<meta property="og:image" content="logo.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://fat-biddy.vercel.app/">
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"CafeOrCoffeeShop",
-"name":"Fat Biddy Cafe",
-"telephone":"+919676848887",
-"address":{
-"@type":"PostalAddress",
-"streetAddress":"Police Station Road, Padmaja Nagar, Kanuru",
-"addressLocality":"Vijayawada",
-"addressRegion":"Andhra Pradesh",
-"postalCode":"520007",
-"addressCountry":"IN"
-}
-}
-</script>
-
-<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+<title>
+Fat Biddy Cafe
+</title>
 
 <link
 href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -144,7 +114,7 @@ color:#d4a373;
 
 .hero{
 
-min-height:100vh;
+height:100vh;
 
 display:flex;
 justify-content:center;
@@ -152,10 +122,7 @@ align-items:center;
 
 text-align:center;
 
-padding-top:140px;
-padding-left:20px;
-padding-right:20px;
-padding-bottom:20px;
+padding:20px;
 
 background:
 linear-gradient(
@@ -341,9 +308,9 @@ transform:translateY(-10px);
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
+repeat(auto-fit,minmax(320px,1fr));
 
-gap:20px;
+gap:25px;
 
 }
 
@@ -351,9 +318,7 @@ gap:20px;
 
 width:100%;
 
-aspect-ratio:1/1;
-
-height:auto;
+height:400px;
 
 object-fit:cover;
 
@@ -373,114 +338,6 @@ translateY(-10px)
 scale(1.03);
 
 }
-  @media (max-width:768px){
-
-nav{
-
-padding:15px 5%;
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-.logo{
-
-font-size:24px;
-
-text-align:center;
-
-}
-
-.hero{
-
-padding-top:180px;
-
-}
-
-.hero-tag{
-
-margin-top:40px;
-
-}
-
-.hero h1{
-
-font-size:60px;
-
-}
-
-.hero-sub{
-
-font-size:18px;
-
-}
-font-size:24px;
-
-text-align:center;
-
-}
-
-.nav-links{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:15px;
-
-}
-
-.hero h1{
-
-font-size:55px;
-
-}
-
-.hero-sub{
-
-font-size:18px;
-
-letter-spacing:6px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-line-height:30px;
-
-}
-
-.section-title h2{
-
-font-size:36px;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.btn{
-
-width:90%;
-
-max-width:300px;
-
-}
-
-}
 
 </style>
 
@@ -494,16 +351,6 @@ max-width:300px;
 <nav>
 
 <div class="logo">
-
-<img
-src="logo.png"
-style="
-height:55px;
-width:55px;
-border-radius:50%;
-vertical-align:middle;
-margin-right:12px;
-">
 
 Fat Biddy Cafe
 
@@ -770,7 +617,6 @@ We focus on fresh ingredients, excellent service and premium experiences for eve
 
 <img
 src="fat2.jpg"
-alt="Fat Biddy Cafe Premium Interior"
 
 style="
 width:100%;
@@ -898,11 +744,7 @@ Rich espresso blended with silky milk foam.
 
 <h4>
 
-₹149
-
-</h4>
-
-</div>
+₹149</h4><br><button class="btn btn-primary" onclick="addToOrder('Cappuccino',149)">Add to Order</button></div>
 
 <div class="card">
 
@@ -922,11 +764,7 @@ Refreshing chilled coffee topped with creamy goodness.
 
 <h4>
 
-₹179
-
-</h4>
-
-</div>
+₹179</h4><br><button class="btn btn-primary" onclick="addToOrder('Cold Coffee',179)">Add to Order</button></div>
 
 <div class="card">
 
@@ -946,11 +784,7 @@ Creamy chocolate delight loved by everyone.
 
 <h4>
 
-₹199
-
-</h4>
-
-</div>
+₹199</h4><br><button class="btn btn-primary" onclick="addToOrder('Chocolate Shake',199)">Add to Order</button></div>
 
 <div class="card">
 
@@ -970,11 +804,7 @@ Juicy burger loaded with flavor and freshness.
 
 <h4>
 
-₹249
-
-</h4>
-
-</div>
+₹249</h4><br><button class="btn btn-primary" onclick="addToOrder('Fat Biddy Burger',249)">Add to Order</button></div>
 
 <div class="card">
 
@@ -994,11 +824,7 @@ Perfectly grilled and packed with taste.
 
 <h4>
 
-₹169
-
-</h4>
-
-</div>
+₹169</h4><br><button class="btn btn-primary" onclick="addToOrder('Grilled Sandwich',169)">Add to Order</button></div>
 
 <div class="card">
 
@@ -1018,13 +844,11 @@ Golden crispy fries served fresh and hot.
 
 <h4>
 
-₹129
-
-</h4>
+₹129</h4><br><button class="btn btn-primary" onclick="addToOrder('French Fries',129)">Add to Order</button></div>
 
 </div>
 
-</div>
+<center><button class="btn btn-primary" onclick="orderOnWhatsApp()">🛒 Place Order on WhatsApp</button></center>
 
 </section>
 
@@ -1132,7 +956,6 @@ Must Try
 
 <img
 src="fat3.jpg"
-alt="Signature Food at Fat Biddy Cafe"
 
 style="
 width:100%;
@@ -1170,17 +993,17 @@ Every Corner Designed For Comfort & Memories
 
 <div class="gallery-grid">
 
-<img src="fat1.jpg" alt="Fat Biddy Cafe Interior Vijayawada">
+<img src="fat1.jpg">
 
-<img src="fat2.jpg" alt="Fat Biddy Cafe Seating Area">
+<img src="fat2.jpg">
 
-<img src="fat3.jpg" alt="Food and Coffee at Fat Biddy Cafe">
+<img src="fat3.jpg">
 
-<img src="fat2.jpg" alt="Fat Biddy Cafe Seating Area">
+<img src="fat2.jpg">
 
-<img src="fat3.jpg" alt="Food and Coffee at Fat Biddy Cafe">
+<img src="fat3.jpg">
 
-<img src="fat1.jpg" alt="Fat Biddy Cafe Interior Vijayawada">
+<img src="fat1.jpg">
 
 </div>
 
@@ -1278,7 +1101,6 @@ Ideal for friends, families, dates and casual meetings.
 
 <img
 src="fat1.jpg"
-alt="Cafe Ambience at Fat Biddy Cafe"
 
 style="
 width:100%;
@@ -1590,7 +1412,6 @@ Comfortable spaces designed for relaxation and enjoyment.
 
 <img
 src="fat2.jpg"
-alt="Customers Enjoying Fat Biddy Cafe"
 
 style="
 width:100%;
@@ -1829,6 +1650,19 @@ behavior:'smooth'
 
 }
 
+</script>
+
+
+<script>
+let cart=[];
+function addToOrder(item,price){cart.push({item,price});alert(item+" added to order!");}
+function orderOnWhatsApp(){
+ if(cart.length===0){alert("Please add at least one item.");return;}
+ let m="☕ *Fat Biddy Cafe Order*%0A%0A";let total=0;
+ cart.forEach((x,i)=>{m+=(i+1)+". "+x.item+" - ₹"+x.price+"%0A";total+=x.price;});
+ m+="%0A💰 Total : ₹"+total+"%0A%0AThank You!";
+ window.open("https://wa.me/919676848887?text="+m,"_blank");
+}
 </script>
 
 </body>
